@@ -12,6 +12,9 @@ const formularioLogin = (req, res) => {
     });
 };
 
+
+
+
 // Formulario de registro
 const formularioRegister = (request, response) => {
     response.render('auth/register', {
