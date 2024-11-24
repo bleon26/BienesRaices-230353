@@ -193,15 +193,7 @@ const confirm = async (req, res) => {
     });
 };
 
-// Función que comprueba una cuenta
-const checkToken = (req, res) => {
-    // Lógica para verificar el token
-};
 
-// Cambiar contraseña
-const newPassword = (req, res) => {
-    // Lógica para cambiar la contraseña
-};
 
 export {
     formularioLogin,
@@ -209,7 +201,5 @@ export {
     formularioPasswordRecovery,
     createNewUser,
     confirm,
-    checkToken,
-    newPassword,
     resetPassword
 };
