@@ -1,7 +1,7 @@
 import { check, validationResult } from "express-validator";
 import User from "../models/User.js";
 import { generateId } from "../helpers/tokens.js";
-import {registerEmail,passwordRecoveryEmail} from '../helpers/emails.js'
+import {registerEmail} from '../helpers/emails.js'
 import { where } from "sequelize";
 
 const formularioLogin = (req, res) => {

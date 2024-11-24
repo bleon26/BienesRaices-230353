@@ -2,15 +2,14 @@ extends ../layout/index
 
 block contenido
     div.py-10
-        h1.text-center.font-extrabold.my-10.text-4xl.text-emerald-400 Bienes 
+        h1.text-center.font-extrabold.my-10.text-4xl.text-azulrey Bienes 
             span.font-normal.text-black Raíces
         h2.text-center.font-extrabold.text-2xl= page
 
         if errors
             div(class="max-w-md mx-auto my-10")
                 each error in errors
-                    div(class="bg-redd text-white p-4 rounded-md flex items-center justify-between mb-2")
-                        // Los iconos ahora están correctamente configurados
+                    div(class="bg-rojo text-white p-4 rounded-md flex items-center text-aling:center justify-between mb-2")
                         if error.msg == "El nombre no puede ir vacío"
                             i(class="fas fa-user-times mr-2")  
                         else if error.msg == "El correo electrónico es un campo obligatorio"
@@ -39,13 +38,13 @@ block contenido
                         input#password.w-full.px-3.py-2.border-2.border-black.rounded-md(type="password" placeholder="Minimo de 8 caracteres" name="pass_usuario")
                     div
                         label.block.text-sm.uppercase.text-black.mb-2.font-bold Confirmar Contraseña: 
-                        input#password2.w-full.px-3.py-2.border-2.border-balck.rounded-md(type="password" placeholder="Minimo de 8 caracteres" name="pass2_usuario")
+                        input#password2.w-full.px-3.py-2.border-2.border-black.rounded-md(type="password" placeholder="Minimo de 8 caracteres" name="pass2_usuario")
                     div.flex.items-center.justify-between
-                        a.text-gray-500.text-xs(href="/auth/login" class="hover:underline decoration-2 hover:decoration-pigmentgreen") ¿Ya tienes cuenta? Inicia Sesión
-                        a.text-gray-500.text-xs(href="/auth/passwordRecovery" class="hover:underline decoration-2 hover:decoration-pigmentgreen") Recuperar Contraseña
-                    input(class="w-full bg-pigmentgreen hover:bg-celadon text-black font-bold py-3 cursor-pointer" type="submit" value="Crear Cuenta")
+                        a.text-gray-500.text-xs(href="/auth/login" class="hover:underline decoration-2 hover:decoration-azulrey") ¿Ya tienes cuenta? Inicia Sesión
+                        a.text-gray-500.text-xs(href="/auth/passwordRecovery" class="hover:underline decoration-2 hover:decoration-azulrey") Recuperar Contraseña
+                    input(class="w-full bg-azulrey hover:bg-morado-100 text-black font-bold py-3 cursor-pointer" type="submit" value="Crear Cuenta")
     script.
-        document.querySelectorAll('.bg-redd').forEach(error => {
+        document.querySelectorAll('.bg-rojo').forEach(error => {
             setTimeout(() => {
                 error.style.display = 'none';
             }, 7000); 

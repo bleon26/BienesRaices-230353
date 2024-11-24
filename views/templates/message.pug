@@ -1,9 +1,12 @@
 extends ../layout/index
 
 block contenido
+
     div.py-10
-        h1.text-center.font-extrabold.my-10.text-4xl.text-pigmentgreen Bienes 
-            span.font-normal.text-black Raíces
-        h2.text-center.font-extrabold.text-2xl.text-emerald= page
-    div(class="bg-white text-center text-black p-4 text-lg shadow-xl")
-        p.text-xl.font-bold.text-center.my-10= msg 
+        h1.text-center.font-extrabold.my-10.text-4xl.text-azulrey
+            Bienes
+            span.font-normal.text-black.mx-2 Raíces
+    h2.text-center.font-extrabold.text-2xl.text-black.my-5= page
+    div(class="bg-white text-center text-black p-6 text-lg shadow-xl rounded-xl max-w-lg mx-auto py-4 px-6")
+        div(class="bg-azulrey-100 py-4 px-6 rounded-lg")
+            p.text-xl.font-semibold.text-center.my-5= msg
