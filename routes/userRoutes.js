@@ -1,5 +1,5 @@
 import express from 'express';
-import { formularioLogin,formularioRegister,formularioPasswordRecovery,createNewUser,confirm, resetPassword} from '../controllers/userController.js';
+import { formularioLogin,formularioRegister,formularioPasswordRecovery,createNewUser,confirm, resetPassword, comprobarToken, nuevoPassword} from '../controllers/userController.js';
 
 const router =  express.Router();
 
@@ -43,9 +43,14 @@ router.delete("/deleteUser/:email", function(request,response){
 router.get("/login",formularioLogin/*Middelware*/)
 router.get("/createAccount",formularioRegister)
 router.post("/createAccount",formularioRegister)
-router.get("/passwordRecovery",formularioPasswordRecovery)
-router.post("/passwordRecovery", resetPassword)
+
 router.get('/confirm/:token',confirm )
 
+router.get("/passwordRecovery",formularioPasswordRecovery)
+router.post("/passwordRecovery", resetPassword)
+
+// Almacena el nuevo password
+router.get("/passwordRecovery/:token",comprobarToken)
+router.post("/passwordRecovery/:token", nuevoPassword)
 
 export default router;
