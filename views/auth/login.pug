@@ -5,6 +5,15 @@ block contenido
         h1.text-center.font-extrabold.my-10.text-4xl.text-azulrey Bienes 
             span.font-normal.text-black Raíces
         h2.text-center.font-extrabold.text-2xl=page
+
+        if errors
+            div.max-w-md.mx-auto.my-10
+                each error in errors
+                    if error.msg
+                        div.bg-red.text-white.p-4.rounded-md.flex.items-center.justify-between.mb-2
+                            p.text-sm.font-bold= error.msg
+                            button.ml-2.bg-transparent.border-0.text-white(onclick="this.parentElement.style.display='none'") &times;
+
         .mt-8.mx-auto.max-w-md
             .bg-white.py-8.px-4.shadow
                 form(action="").space-y-5.px-6
