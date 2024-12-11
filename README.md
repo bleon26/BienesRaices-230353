@@ -12,8 +12,10 @@ Para poder demostrar y aprender la creación y consumo de interfaces de Programa
 |9.|22/10/2024|Creación de una Aplicación Web usando Express|11|✅Finalizada|
 |10.|24/10/2024|Operaciones Básicas de una API a traves de los verbos HTTP|12|✅Finalizada|
 |11.|11/11/2024|Creacion de formularios para el ingreso, registro y recuperacion de la contraseña de los usuarios|13|✅Finalizada|
-|12.|	20/11/2024|Implementación de la funcionalidad del registro de Cuentas de Usuario|	30 | ✅Finalizada|
-|13.|28/11/2024|Implementación de recupueración de contraseñas|20| ⭐Activa |
+|12.|20/11/2024|Implementación de la funcionalidad del registro de Cuentas de Usuario|	30 | ✅Finalizada|
+|13.|21/11/2024|Implementación de validación en formulario de recuperación de contraseña|20|✅ Finalizada.|
+|14.|10/12/2024|Implementación de la vista principal de propiedades|10|✅ Finalizada.|
+
 
 ## Autor
 **Brandon Leon Cabrera** / [@bleon26](https://github.com/bleon26)<br>
