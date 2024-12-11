@@ -1,7 +1,7 @@
 import express from 'express';
 import generalRoutes from './routes/generalRoutes.js';
 import userRoutes from './routes/userRoutes.js';
-import propertyRoutes from './routes/properties.js'
+import propertyRoutes from './routes/properties.js';
 import db from './db/config.js';
 import csrf from 'csurf';
 import cookieParser from 'cookie-parser';
@@ -31,6 +31,8 @@ app.use(csrf({ cookie: true }));
 app.use('/', generalRoutes);
 app.use('/auth', userRoutes);
 app.use('/properties', propertyRoutes); // Ruta de propiedades
+// Habilitar Pug
+
 // Habilitar Pug
 app.set('view engine', 'pug');
 app.set('views', './views');

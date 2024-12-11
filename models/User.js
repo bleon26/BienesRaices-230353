@@ -15,10 +15,6 @@ const User=db.define('tbb_users',{
         type:DataTypes.STRING,
         allowNull:false
     },
-    fecha_nacimiento    : {
-        type: DataTypes.DATE, 
-        allowNull: true
-    },
     token:DataTypes.STRING,
     confirmed:DataTypes.BOOLEAN
 },{
