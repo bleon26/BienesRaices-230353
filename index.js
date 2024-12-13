@@ -1,3 +1,5 @@
+import 'dotenv/config';  // Cargar variables de entorno
+
 import express from 'express';
 import generalRoutes from './routes/generalRoutes.js';
 import userRoutes from './routes/userRoutes.js';
@@ -6,9 +8,12 @@ import db from './db/config.js';
 import csrf from 'csurf';
 import cookieParser from 'cookie-parser';
 
+// Verifica que la variable de entorno JWT_SECRET esté cargada
+console.log('JWT Secret:', process.env.JWT_SECRET);  // Verifica que la clave secreta esté disponible
+
 // Conexión a la base de datos
 try {
-    await db.authenticate(); // Verifica las credenciales del usuario 
+    await db.authenticate(); // Verifica las credenciales del usuario
     db.sync();
     console.log('Conexión correcta a la base de datos');
 } catch (error) {
@@ -31,7 +36,6 @@ app.use(csrf({ cookie: true }));
 app.use('/', generalRoutes);
 app.use('/auth', userRoutes);
 app.use('/properties', propertyRoutes); // Ruta de propiedades
-// Habilitar Pug
 
 // Habilitar Pug
 app.set('view engine', 'pug');
